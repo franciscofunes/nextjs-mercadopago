@@ -47,7 +47,7 @@ export const MercadoPagoButton = ({ subscription }: MercadoPagoButtonProps) => {
           _blank'
 					className='lg:mt-10 mt-6 flex justify-center w-36 border-0 rounded-lg bg-indigo-500 font-bold text-white px-4 py-3 transition-shadow duration-300 ease-in hover:shadow-primary'
 				>
-					Comprar
+					Contratar
 				</a>
 			)}
 		</div>
