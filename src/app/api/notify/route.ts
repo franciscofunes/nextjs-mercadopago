@@ -1,11 +1,10 @@
 import mercadopago from 'mercadopago';
-import { NextApiRequest, NextApiResponse } from 'next';
 
 mercadopago.configure({
 	access_token: process.env.NEXT_ACCESS_TOKEN!,
 });
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: any) {
 	const { query } = req;
 
 	const topic = query.topic || query.type;
@@ -37,7 +36,6 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
 			});
 		}
 	} catch (error: any) {
-		// Specify the error type as 'any'
 		// Handle errors and return an error response
 		return new Response(JSON.stringify({ error: error.message }), {
 			status: 500,
