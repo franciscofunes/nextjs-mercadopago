@@ -13,9 +13,9 @@ export async function GET(req: any) {
 
 	try {
 		if (topic === 'payment') {
-			const paymentId = query.id || query['data.id'];
+			const paymentId = query?.id || query['data.id'];
 			let payment = await mercadopago.payment.findById(Number(paymentId));
-			let paymentStatus = payment.body.status;
+			let paymentStatus = payment?.body.status;
 
 			console.log([payment, paymentStatus]);
 
