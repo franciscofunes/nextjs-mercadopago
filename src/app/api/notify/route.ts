@@ -4,7 +4,7 @@ mercadopago.configure({
 	access_token: process.env.NEXT_ACCESS_TOKEN!,
 });
 
-export async function GET(req: Request) {
+export async function GET(req: any) {
 	const { query } = req.json;
 
 	const topic = query?.topic || query.type;
