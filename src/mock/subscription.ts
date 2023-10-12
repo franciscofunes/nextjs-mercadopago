@@ -15,9 +15,9 @@ const subscriptionId = crypto.randomUUID();
 export const Subscription: ISubscription = {
 	id: subscriptionId,
 	parentCardTitle:
-		'Experimenta lo mejor de nuestra aplicación con una Suscripción Premium',
+		'Experimenta lo mejor de nuestra aplicación con una Subscripción Premium',
 	parentCardSubtitle:
-		'La suscripción Premium te ofrece una experiencia sin publicidad de nuestra aplicación',
+		'La subscripción Premium te ofrece una experiencia sin publicidad de nuestra aplicación',
 	childCardTitle: 'Premium Pack',
 	childCardSubtitle: 'Libre de anuncios',
 	price: 2500,
