@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 		if (requestBody && requestBody.subscription) {
 			const subscription = requestBody.subscription;
 
-			const URL = 'ltc-subscripcion.vercel.app';
+			const URL = 'https://ltc-subscripcion.vercel.app/';
 
 			try {
 				const preference: CreatePreferencePayload = {
