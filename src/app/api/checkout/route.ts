@@ -22,7 +22,7 @@ export async function POST(req: Request) {
 			const URL_FAILED =
 				process.env.NODE_ENV === 'development'
 					? 'http://localhost:3000/pago-fallido'
-					: 'https://lleva-tus-cuentas.netlify.app//pago-fallido';
+					: 'https://lleva-tus-cuentas.netlify.app/pago-fallido';
 
 			const URL_NEXT_API =
 				process.env.NODE_ENV === 'development'
