@@ -14,7 +14,20 @@ export async function POST(req: Request) {
 		if (requestBody && requestBody.subscription) {
 			const subscription = requestBody.subscription;
 
-			const URL = 'https://ltc-subscripcion.vercel.app/';
+			const URL_SUCCESS =
+				process.env.NODE_ENV === 'development'
+					? 'http://localhost:3000/pago-exitoso'
+					: 'https://your-production-url/pago-exitoso';
+
+			const URL_FAILED =
+				process.env.NODE_ENV === 'development'
+					? 'http://localhost:3000/pago-fallido'
+					: 'https://your-production-url/pago-fallido';
+
+			const URL_NEXT_API =
+				process.env.NODE_ENV === 'development'
+					? 'http://localhost:3006'
+					: 'https://ltc-subscripcion.vercel.app/';
 
 			try {
 				const preference: CreatePreferencePayload = {
@@ -27,10 +40,10 @@ export async function POST(req: Request) {
 					],
 					auto_return: 'approved',
 					back_urls: {
-						success: `${URL}`,
-						failure: `${URL}`,
+						success: `${URL_SUCCESS}`,
+						failure: `${URL_FAILED}`,
 					},
-					notification_url: `${URL}/api/notify`,
+					notification_url: `${URL_NEXT_API}/api/notify`,
 				};
 
 				const response = await mercadopago.preferences.create(preference);
