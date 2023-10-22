@@ -8,7 +8,7 @@ import { SiPrometheus } from 'react-icons/si';
 
 export default function Home() {
 	return (
-		<div className='flex items-center justify-center flex-col mt-10 lg:mt-0 bg-gray-900 dark:bg-gray-900'>
+		<div className='flex items-center justify-center flex-col mt-5 lg:mt-0 bg-gray-900 dark:bg-gray-900'>
 			<div className='p-4 md:p-10 w-full max-w-md relative'>
 				{/* Main Card */}
 				<motion.div
